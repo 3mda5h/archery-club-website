@@ -6,20 +6,9 @@ import (
 	"net/http"
 )
 
-// scans the templates/ folder and parses all .html files there into a *template.Template object
-var templates = template.Must(template.ParseGlob("templates/*.html"))
-
-// Combine both template sets
-func init() {
-	//ParseGlob adds to the existing template set
-	//adds all the page templates into that same set
-	//This is so that, when rendered, go can combine them (layout + content blocks)
-	template.Must(templates.ParseGlob("pages/*.html"))
-}
+var templates = template.Must(template.ParseGlob("pages/*.html"))
 
 func renderTemplate(w http.ResponseWriter, page string) {
-	log.Println("page is ", page)
-	//Render layout.html as the base, and pass data into it.
 	err := templates.ExecuteTemplate(w, page, nil)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -30,10 +19,9 @@ func main() {
 	fs := http.FileServer(http.Dir("./assets"))
 	http.Handle("/assets/", http.StripPrefix("/assets/", fs))
 
-	// Routes
+	// Route handlers
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		renderTemplate(w, "index.html")
-		log.Println("routed to /")
 	})
 	http.HandleFunc("/practices", func(w http.ResponseWriter, r *http.Request) {
 		renderTemplate(w, "practices.html")
