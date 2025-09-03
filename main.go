@@ -29,6 +29,9 @@ func main() {
 	http.HandleFunc("/schedule", func(w http.ResponseWriter, r *http.Request) {
 		renderTemplate(w, "schedule.html")
 	})
+	http.HandleFunc("/membership", func(w http.ResponseWriter, r *http.Request) {
+		renderTemplate(w, "membership.html")
+	})
 	http.HandleFunc("/locations", func(w http.ResponseWriter, r *http.Request) {
 		renderTemplate(w, "locations.html")
 	})

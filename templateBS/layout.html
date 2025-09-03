@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <title>{{ block "title" . }}OSU Archery Club{{ end }}</title>
+</head>
+<body>
+    <header><img src="assets/archery_logo.png" alt="Archery club logo"><h1>OSU Archery</h1></header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/practices">Practices</a></li>
+            <li><a href="/schedule">Schedule</a></li>
+            <li><a href="/membership">Membership</a></li>
+            <li><a href="/locations">Locations</a></li>
+            <li><a href="/photo_gallery">Photo Gallery</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        {{ block "content" . }}{{ end }}
+    </main>    
+</body>
+</html>
