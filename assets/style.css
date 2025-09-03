@@ -89,6 +89,21 @@ main h3{
 main ul li{
     margin-bottom:10px;
 }
+
+hr {
+  border: none;              /* remove default styling */
+  border-top: 2px solid #a8a8a8; /* thickness + color */
+  margin: 20px 0;            /* spacing above/below */
+}
+
+.location{
+    display:flex;
+}
+
+.location img{
+    height: 200px;
+    padding: 20px;
+}
 .navbar a:hover {
     background-color: hsl(0, 0%, 10%);
 }
