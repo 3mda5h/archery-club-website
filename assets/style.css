@@ -104,14 +104,15 @@ hr {
   margin: 20px 0;            /* spacing above/below */
 }
 
-.location{
+.text-image{
     display:flex;
 }
 
-.location img{
+.text-image img{
     height: 17vw;
     padding: 20px;
 }
+
 .navbar a:hover {
     background-color: hsl(0, 0%, 10%);
 }
