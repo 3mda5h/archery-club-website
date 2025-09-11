@@ -92,8 +92,8 @@ main{
 
 .page-content {
     padding-top: clamp(5px, 4vw, 40px);
-    padding-left: clamp(5px, 3vw, 80px);
-    padding-right: clamp(5px, 3vw, 80px);
+    padding-left: clamp(5px, 4vw, 70px);
+    padding-right: clamp(5px, 4vw, 70px);
     padding-bottom: clamp(5px, 4vw, 70px);
 }
 
