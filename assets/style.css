@@ -40,7 +40,8 @@ body {
     background-color: white;
 }
 
- header {
+/* Keep your header styling */
+header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,32 +49,40 @@ body {
 }
 
 header h1 {
-    font-size: 2rem; /* change size if you like */
+    font-size: 2rem;
     font-family: 'Stratum-Bold';
     display: flex;
     align-items: center;
-    padding: 10px; /* spacing between logo and text */
+    padding: 10px;
     margin: 0;
 }
 
 header img {
-    height: 4em; /* match the text height */
-    width: auto; /* keep aspect ratio */
+    height: 4em;
+    width: auto;
 }
 
-
-.navbar ul {
-    list-style-type: none;
-    font-family: 'Stratum-Medium';
+/* Navbar bar itself (always full width orange) */
+.navbar {
     background-color: #F15C22;
-    padding: 0px;
-    margin: 0px;
+    font-family: 'Stratum-Medium';
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Horizontal nav links (desktop only) */
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     overflow: hidden;
     display: flex;
     justify-content: center;
 }
 
-.navbar a {
+.nav-links li a {
     color: white;
     text-decoration: none;
     padding: 15px;
@@ -82,9 +91,94 @@ header img {
     font-size: 20px;
 }
 
-.navbar a:hover {
-    background-color:#c14412;
+.nav-links li a:hover {
+    background-color: #c14412;
 }
+
+/* Hamburger button */
+.hamburger {
+    display: none; /* hidden on desktop */
+    font-size: 28px;
+    background: none; /* transparent so it blends into bar */
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 15px 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Close button inside sidebar */
+.close-btn {
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: left;
+    width: 100%;
+    display: none; /* hidden by default (desktop) */
+}
+
+.close-btn:hover {
+    background-color: #c14412;
+}
+
+/* --- Mobile styles --- */
+@media (max-width: 768px) {
+    .close-btn {
+        display: block;
+    }
+    /* Keep the orange bar but remove links from it */
+    .nav-links {
+        display: none; /* hidden in bar, but sidebar version will show */
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    /* Sidebar menu (slides from left) */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -250px;  /* off-screen by default */
+        width: 250px;
+        height: 100%;
+        background-color: #F15C22;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 3rem;
+        transition: left 0.3s ease;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    /* When open */
+    .nav-links.open {
+        display: flex;
+        left: 0;
+    }
+
+    /* Ensure the orange bar stays visible at top */
+    .navbar {
+        height: 55px; /* match link height */
+        justify-content: flex-start;
+    }
+}
+
 
 main{
     background-color: #f5f5f5;
@@ -92,8 +186,8 @@ main{
 
 .page-content {
     padding-top: clamp(5px, 4vw, 40px);
-    padding-left: clamp(5px, 4vw, 70px);
-    padding-right: clamp(5px, 4vw, 70px);
+    padding-left: clamp(5px, 3vw, 70px);
+    padding-right: clamp(5px, 3vw, 70px);
     padding-bottom: clamp(5px, 4vw, 70px);
 }
 

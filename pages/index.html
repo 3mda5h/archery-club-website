@@ -7,18 +7,31 @@
     <title>OSU Archery Club</title>
 </head>
 <body>
-    <header><img src="assets/images/archery_logo.png" alt="Archery club logo"><h1>OSU Archery</h1></header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/practices">Practices</a></li>
-            <li><a href="/schedule">Schedule</a></li>
-            <li><a href="/membership">Membership</a></li>
-            <li><a href="/locations">Locations</a></li>
-            <li><a href="/photo_gallery">Photo Gallery</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+  <img src="assets/images/archery_logo.png" alt="Archery club logo">
+  <h1>OSU Archery</h1>
+</header>
+
+<nav class="navbar">
+  <!-- Hamburger button (mobile only) -->
+  <button class="hamburger" id="hamburger">☰</button>
+
+  <!-- Navigation links (with close button inside) -->
+  <ul class="nav-links" id="nav-links">
+    <li><button class="close-btn" id="close-btn">×</button></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/practices">Practices</a></li>
+    <li><a href="/schedule">Schedule</a></li>
+    <li><a href="/membership">Membership</a></li>
+    <li><a href="/locations">Locations</a></li>
+    <li><a href="/photo_gallery">Photo Gallery</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+
+
     <main id="home-page">
         <div class="page-content">
             <h2>Welcome to the OSU Archery Club website!</h2>
@@ -29,4 +42,17 @@
         </div>
     </main>
 </body>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  const closeBtn = document.getElementById('close-btn');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.add('open');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  });
+</script>
 </html>
