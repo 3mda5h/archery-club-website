@@ -1,26 +1,26 @@
 @font-face {
-  font-family: 'Stratum-Regular'; 
+  font-family: 'Stratum-Regular';
   src: url('fonts/Stratum2-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Stratum-Medium'; 
+  font-family: 'Stratum-Medium';
   src: url('fonts/Stratum2-Medium.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Stratum-Bold'; 
+  font-family: 'Stratum-Bold';
   src: url('fonts/Stratum2-Bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Stratum-Black'; 
+  font-family: 'Stratum-Black';
   src: url('fonts/Stratum2-Black.otf') format('opentype');
   font-weight: bolder;
   font-style: normal;
@@ -91,10 +91,10 @@ main{
 }
 
 .page-content {
-    padding-top: 2vw;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    padding-bottom: 3vw;
+    padding-top: clamp(5px, 2vw, 40px);
+    padding-left: clamp(5px, 2vw, 80px);
+    padding-right: clamp(5px, 2vw, 80px);
+    padding-bottom: clamp(5px, 2vw, 70px);
 }
 
 main h2{
@@ -134,7 +134,7 @@ hr {
 .image-text-block {
   display: flex;
   align-items: center;
-  gap: 3vw; /* spacing between text and image */
+  gap: clamp(5px, 3vw, 40px);; /* spacing between text and image */
   margin-top: 50px;
 }
 
@@ -156,4 +156,5 @@ hr {
   max-width: 47%;
   height: auto;
 }
+
 
