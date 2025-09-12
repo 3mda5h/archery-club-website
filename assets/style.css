@@ -36,16 +36,17 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-family: Verdana;
-    font-size: clamp(12.5px, 1vw, 16px);
+    font-size: clamp(13px, 1vw, 16px);
     background-color: white;
+    margin-top: 0px;
 }
 
-/* Keep your header styling */
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    gap: 10px
 }
 
 header h1 {
@@ -53,7 +54,7 @@ header h1 {
     font-family: 'Stratum-Bold';
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 0px;
     margin: 0;
 }
 
@@ -148,14 +149,11 @@ header img {
     .nav-links {
         position: fixed;
         top: 0;
-        right: -250px;  /* off-screen by default */
-        width: 250px;
+        width: 200px;
         height: 100%;
         background-color: #F15C22;
         flex-direction: column;
         align-items: flex-start;
-        padding-top: 3rem;
-        transition: right 0.3s ease;
     }
 
     .nav-links li {
@@ -241,14 +239,13 @@ p {
 hr {
   border: none;              /* remove default styling */
   border-top: 2px solid #a8a8a8; /* thickness + color */
-  margin: 20px 0;            /* spacing above/below */
+  margin: 30px 0;            /* spacing above/below */
 }
 
 .image-text-block {
   display: flex;
   align-items: center;
   gap: clamp(5px, 3vw, 40px);; /* spacing between text and image */
-  margin-top: 50px;
 }
 
 .image-text-block img {
