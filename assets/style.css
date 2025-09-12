@@ -195,7 +195,10 @@ header img {
     }
 
     .image-text-block img {
-    order: 2; /* always push image to the bottom */
+        order: 2; /* always push image to the bottom */
+        max-width: 80%;
+        width: 80%;
+        height: auto;
     }
 
     .image-text-block div {
@@ -205,6 +208,7 @@ header img {
     .image-text-block .image-group {
     order: 2; /* always keep text above */
     }
+    
 }    
 
 
@@ -213,7 +217,7 @@ main{
 }
 
 .page-content {
-    padding-top: clamp(5px, 3vw, 40px);
+    padding-top: clamp(5px, 5vw, 40px);
     padding-left: clamp(5px, 3vw, 70px);
     padding-right: clamp(5px, 3vw, 70px);
     padding-bottom: clamp(5px, 4vw, 70px);
