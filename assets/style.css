@@ -78,6 +78,12 @@ header img {
     justify-content: center;
 }
 
+.mobile-h2{
+        display: none;
+        color: white;
+        font-size: 30px;
+    }
+
 /* Horizontal nav links (desktop only) */
 .nav-links {
     list-style-type: none;
@@ -104,15 +110,13 @@ header img {
 /* Hamburger button */
 .hamburger {
     display: none; /* hidden on desktop */
-    font-size: 28px;
+    font-size: 32px;
     background: none; /* transparent so it blends into bar */
     border: none;
-    color: white;
+    color: #F15C22;
     cursor: pointer;
     position: absolute;
-    right: 10px; /*10px to the right edge of the navbar */
-    top: 50%; /*top edge of hamburger is positioned half the height of the navbar from the top of the navbar*/
-    transform: translateY(-50%); /*move hamburger up by 50% of its own height so its center is in the middle of the navbar*/
+    right: 10px;
 }
 
 /* Close button inside sidebar */
@@ -175,8 +179,15 @@ header img {
 
     /* Ensure the orange bar stays visible at top */
     .navbar {
-        height: 55px; /* match link height */
-        justify-content: flex-start;
+        height: 55px;  
+    }
+
+    .mobile-h2{
+        display: block;
+    }
+
+    .desktop-h2{
+        display: none;
     }
     
     .image-text-block {
@@ -202,7 +213,7 @@ main{
 }
 
 .page-content {
-    padding-top: clamp(5px, 4vw, 40px);
+    padding-top: clamp(5px, 3vw, 40px);
     padding-left: clamp(5px, 3vw, 70px);
     padding-right: clamp(5px, 3vw, 70px);
     padding-bottom: clamp(5px, 4vw, 70px);
@@ -214,7 +225,7 @@ main h2{
     font-family: 'Stratum-Bold';
     font-size: 33px;
     margin: 0px;
-    padding: 0px;
+    margin-bottom: 20px;
 }
 
 main h3{
