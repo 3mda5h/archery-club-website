@@ -57,6 +57,11 @@ header h1 {
     margin: 0;
 }
 
+header h1 a{
+    text-decoration: none;
+    color: black;
+}
+
 header img {
     height: 4em;
     width: auto;
@@ -66,7 +71,7 @@ header img {
 .navbar {
     background-color: #F15C22;
     font-family: 'Stratum-Medium';
-    position: relative;
+    position: relative; /*children of .navbar will be positioned relative to .navbar instead of body or something else*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,10 +108,10 @@ header img {
     border: none;
     color: white;
     cursor: pointer;
-    padding: 15px 20px;
     position: absolute;
-    left: 0;
-    top: 0;
+    right: 10px; /*10px to the right edge of the navbar */
+    top: 50%; /*top edge of hamburger is positioned half the height of the navbar from the top of the navbar*/
+    transform: translateY(-50%); /*move hamburger up by 50% of its own height so its center is in the middle of the navbar*/
 }
 
 /* Close button inside sidebar */
@@ -126,33 +131,31 @@ header img {
     background-color: #c14412;
 }
 
-/* --- Mobile styles --- */
+/* --- apply this CSS only if the screen width is 768px or less (mobile devices) --- */
 @media (max-width: 768px) {
     .close-btn {
+        display: block;
+    }
+      /* Show hamburger */
+    .hamburger {
         display: block;
     }
     /* Keep the orange bar but remove links from it */
     .nav-links {
         display: none; /* hidden in bar, but sidebar version will show */
     }
-
-    /* Show hamburger */
-    .hamburger {
-        display: block;
-    }
-
-    /* Sidebar menu (slides from left) */
+    /* Sidebar menu (slides from right) */
     .nav-links {
         position: fixed;
         top: 0;
-        left: -250px;  /* off-screen by default */
+        right: -250px;  /* off-screen by default */
         width: 250px;
         height: 100%;
         background-color: #F15C22;
         flex-direction: column;
         align-items: flex-start;
         padding-top: 3rem;
-        transition: left 0.3s ease;
+        transition: right 0.3s ease;
     }
 
     .nav-links li {
@@ -169,7 +172,7 @@ header img {
     /* When open */
     .nav-links.open {
         display: flex;
-        left: 0;
+        right: 0;
     }
 
     /* Ensure the orange bar stays visible at top */
@@ -177,7 +180,23 @@ header img {
         height: 55px; /* match link height */
         justify-content: flex-start;
     }
-}
+    
+    .image-text-block {
+    flex-direction: column;
+    }
+
+    .image-text-block img {
+    order: 2; /* always push image to the bottom */
+    }
+
+    .image-text-block div {
+    order: 1; /* always keep text above */
+    }
+    
+    .image-text-block .image-group {
+    order: 2; /* always keep text above */
+    }
+}    
 
 
 main{
