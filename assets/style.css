@@ -36,7 +36,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-family: Verdana;
-    font-size: clamp(13px, 1vw, 16px);
+    font-size: clamp(13.5px, 1vw, 16px);
     background-color: white;
     margin-top: 0px;
 }
@@ -217,10 +217,10 @@ main{
 }
 
 .page-content {
-    padding-top: clamp(5px, 5vw, 40px);
-    padding-left: clamp(5px, 3vw, 70px);
-    padding-right: clamp(5px, 3vw, 70px);
-    padding-bottom: clamp(5px, 4vw, 70px);
+    padding-top: clamp(10px, 5vw, 40px);
+    padding-left: clamp(10px, 3vw, 70px);
+    padding-right: clamp(10px, 3vw, 70px);
+    padding-bottom: clamp(10px, 4vw, 70px);
 }
 
 main h2{
