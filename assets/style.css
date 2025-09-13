@@ -211,16 +211,15 @@ header img {
     
 }    
 
-
 main{
     background-color: #f5f5f5;
 }
 
 .page-content {
-    padding-top: clamp(10px, 5vw, 40px);
-    padding-left: clamp(10px, 3vw, 70px);
-    padding-right: clamp(10px, 3vw, 70px);
-    padding-bottom: clamp(10px, 4vw, 70px);
+    padding-top: clamp(20px, 4vw, 40px);
+    padding-left: clamp(20px, 3vw, 70px);
+    padding-right: clamp(20px, 3vw, 70px);
+    padding-bottom: clamp(20px, 4vw, 70px);
 }
 
 main h2{
@@ -239,8 +238,14 @@ main h3{
     font-size: 25px;
 }
 
-#home-page{
+#home-page-greeting{
     text-align: center;
+    padding-bottom: 50px;
+}
+
+#big-archery-logo{
+    width: clamp(100px, 50%, 350px);
+    height: auto;
 }
 
 main ul li{
@@ -260,7 +265,7 @@ hr {
 .image-text-block {
   display: flex;
   align-items: center;
-  gap: clamp(5px, 3vw, 40px);; /* spacing between text and image */
+  gap: clamp(5px, 3vw, 40px);; /* spacing between text and image */       
 }
 
 .image-text-block img {
