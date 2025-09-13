@@ -136,6 +136,85 @@ header img {
     background-color: #c14412;
 }
 
+
+main{
+    background-color: #f5f5f5;
+}
+
+.page-content {
+    padding-top: clamp(20px, 4vw, 40px);
+    padding-left: clamp(20px, 3vw, 70px);
+    padding-right: clamp(20px, 3vw, 70px);
+    padding-bottom: clamp(20px, 4vw, 70px);
+}
+
+main h2{
+    text-align: center;
+    color: #F15C22;
+    font-family: 'Stratum-Bold';
+    font-size: 33px;
+    margin: 0px;
+}
+
+main h3{
+    margin-bottom: 10px;
+    margin-top: 0px;
+    font-family: 'Stratum-Regular';
+    font-size: 25px;
+}
+
+#home-page-greeting{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#big-archery-logo{
+    width: clamp(100px, 50%, 350px);
+    height: auto;
+}
+
+main ul li{
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+p {
+  line-height: 1.4; /* 1.6 times the font size */
+}
+
+hr {
+  border: none;              /* remove default styling */
+  border-top: 2px solid #a8a8a8; /* thickness + color */
+  margin: 30px 0;            /* spacing above/below */
+}
+
+.image-text-block {
+  display: flex;
+  align-items: center;
+  gap: clamp(5px, 3vw, 40px);; /* spacing between text and image */       
+}
+
+.image-text-block img {
+  width: 40%;
+  flex: 0 0 40%;
+  height: auto;
+}
+
+.image-group {
+  display: flex;
+  width: 45%;
+  flex: 0 0 40%;  
+  gap: 6%;
+  align-items: center;
+
+}
+
+.image-group img {
+  flex: 1 1 auto;  
+  width: 47%;
+  flex: 0 0 47%;  
+  height: auto;
+}
+
 /* --- apply this CSS only if the screen width is 768px or less (mobile devices) --- */
 @media (max-width: 768px) {
     .close-btn {
@@ -196,9 +275,8 @@ header img {
 
     .image-text-block img {
         order: 2; /* always push image to the bottom */
-        max-width: 80%;
-        width: 80%;
-        height: auto;
+        width: 70%;
+        height: auto;  /* keep correct aspect ratio */
     }
 
     .image-text-block div {
@@ -207,84 +285,11 @@ header img {
     
     .image-text-block .image-group {
     order: 2; /* always keep text above */
+        width: 75%;
+        height: auto;  /* keep correct aspect ratio */
     }
     
 }    
 
-main{
-    background-color: #f5f5f5;
-}
-
-.page-content {
-    padding-top: clamp(20px, 4vw, 40px);
-    padding-left: clamp(20px, 3vw, 70px);
-    padding-right: clamp(20px, 3vw, 70px);
-    padding-bottom: clamp(20px, 4vw, 70px);
-}
-
-main h2{
-    text-align: center;
-    color: #F15C22;
-    font-family: 'Stratum-Bold';
-    font-size: 33px;
-    margin: 0px;
-    margin-bottom: 20px;
-}
-
-main h3{
-    margin-bottom: 10px;
-    margin-top: 0px;
-    font-family: 'Stratum-Regular';
-    font-size: 25px;
-}
-
-#home-page-greeting{
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-#big-archery-logo{
-    width: clamp(100px, 50%, 350px);
-    height: auto;
-}
-
-main ul li{
-    margin-bottom: 6px;
-    line-height: 1.4;
-}
-p {
-  line-height: 1.4; /* 1.6 times the font size */
-}
-
-hr {
-  border: none;              /* remove default styling */
-  border-top: 2px solid #a8a8a8; /* thickness + color */
-  margin: 30px 0;            /* spacing above/below */
-}
-
-.image-text-block {
-  display: flex;
-  align-items: center;
-  gap: clamp(5px, 3vw, 40px);; /* spacing between text and image */       
-}
-
-.image-text-block img {
-  max-width: 40%;
-  height: auto;
-}
-
-.image-group {
-  display: flex;
-  max-width: 45%;
-  gap: 6%;
-  align-items: center;
-
-}
-
-.image-group img {
-  flex: 1 1 auto;  
-  max-width: 47%;
-  height: auto;
-}
 
 
