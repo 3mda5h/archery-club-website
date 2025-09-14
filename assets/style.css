@@ -115,6 +115,7 @@ header img {
     display: block;
     text-align: center;
     font-size: 20px;
+    transition: background-color 0.2s ease;
 }
 
 .nav-links li a:hover {
@@ -190,7 +191,7 @@ main h3{
 
 #home-page-buttons{
     display: flex;
-    width: 40%;
+    width: clamp(0px, 100%, 400px);
     justify-content: center;
     padding: 20px;
     gap: 20px;
@@ -224,7 +225,7 @@ main h3{
 }
 
 #big-archery-logo{
-    width: clamp(100px, 55%, 350px);
+    width: clamp(200px, 50%, 350px);
     height: auto;
 }
 /*----------------------------------------------------------------*/
