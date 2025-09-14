@@ -1,4 +1,18 @@
 @font-face {
+  font-family: 'Stratum-Thin';
+  src: url('fonts/Stratum2-Thin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stratum-Light';
+  src: url('fonts/Stratum2-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Stratum-Regular';
   src: url('fonts/Stratum2-Regular.otf') format('opentype');
   font-weight: normal;
@@ -163,15 +177,57 @@ main h3{
     font-size: 25px;
 }
 
+/*HOME PAGE STUFF ------------------------------------------------*/
 #home-page-greeting{
     text-align: center;
+    align-items: center;
     padding-bottom: 50px;
 }
 
-#big-archery-logo{
-    width: clamp(100px, 50%, 350px);
+#home-page-greeting h3{
+    font-family: 'Stratum-Light'
+}
+
+#home-page-buttons{
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    margin-left: auto; /*centers it in the page*/
+    margin-right: auto;
+}
+#home-page-buttons a{
+  display: inline-flex;              /* flex so we can stack items */
+  flex-direction: column;            /* stack text above image */
+  align-items: center;               /* center horizontally */
+  justify-content: center;
+  color: black;         /* orange */
+  font-family: 'Stratum-Regular';
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border-color: #F15C22; 
+  border-style: solid;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  gap: 8px;  
+}
+
+#home-page-buttons a:hover{
+    background-color: #c2c0c0;
+}
+
+#home-page-buttons img{
+    width: 40%;                      
     height: auto;
 }
+
+#big-archery-logo{
+    width: clamp(100px, 55%, 350px);
+    height: auto;
+}
+/*----------------------------------------------------------------*/
 
 main ul li{
     margin-bottom: 6px;
@@ -288,8 +344,7 @@ hr {
         width: 75%;
         height: auto;  /* keep correct aspect ratio */
     }
+}
     
-}    
-
 
 
