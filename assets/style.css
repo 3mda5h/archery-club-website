@@ -190,8 +190,10 @@ main h3{
     padding-bottom: 50px;
 }
 
-#home-page-greeting h3{
-    font-family: 'Stratum-Light'
+#home-page-greeting p{
+    font-family: Verdana;
+    font-weight: 1;
+    font-size: 18px;
 }
 
 #home-page-buttons{
@@ -209,7 +211,7 @@ main h3{
   flex-direction: column;            /* stack text above image */
   align-items: center;               /* center horizontally */
   justify-content: center;
-  color: black;         /* orange */
+  color: black;        
   font-family: 'Stratum-Regular';
   font-size: 18px;
   padding: 12px 24px;
@@ -226,12 +228,15 @@ main h3{
 }
 
 #home-page-buttons img{
-    width: 40%;                      
+    width: 50%;                      
     height: auto;
+    flex-shrink: 0;        /* don’t let flexbox squish it */
+    object-fit: contain;   /* keep proportions no matter what */
 }
 
 #big-archery-logo{
-    width: clamp(200px, 50%, 350px);
+    width: 90%;
+    max-width: 350px;
     height: auto;
 }
 /*----------------------------------------------------------------*/
