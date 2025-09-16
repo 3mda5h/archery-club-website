@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: 'Stratum-Thin';
   src: url('fonts/Stratum2-Thin.otf') format('opentype');
@@ -51,40 +55,69 @@
     max - the largest it can be*/
 body {
     text-align: left;
-    max-width: clamp(60rem, 80%, 80rem);
+    max-width: clamp(60rem, 70%, 70rem);
     margin-left: auto;
     margin-right: auto;
     font-family: Verdana;
-    font-size: clamp(13.5px, 1vw, 16px);
+    font-size: clamp(13.5px, 1vw, 15px);
     background-color: white;
     margin-top: 0px;
 }
 
+/* header should be the containing block for absolute children */
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 10px
+  position: relative;
+  height: 60px;          /* adjust as needed */
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* keeps header content centered visually */
 }
 
-header h1 {
-    font-size: 2rem;
-    font-family: 'Stratum-Bold';
-    display: flex;
-    align-items: center;
-    padding: 0px;
-    margin: 0;
+/* center the title text exactly in the page */
+.site-title {
+  position: absolute;       /* removed from flow so logo won't affect centering */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  display: inline-block;    /* shrink-wrap to the text width */
+  white-space: nowrap;      /* prevents wrapping if you want one-line title */
 }
 
-header h1 a{
-    text-decoration: none;
-    color: black;
+/* anchor inside the title — no change needed except reset spacing */
+.site-title a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Stratum-Bold';
+  font-size: 32px
 }
 
-header img {
-    height: 4em;
-    width: auto;
+/* place the logo to the left of the title, 10px gap */
+.site-logo {
+  position: absolute;       /* positioned relative to .site-title */
+  right: 100%;              /* place the image's right edge at the title's left edge */
+  margin-right: 10px;       /* the 10px gap you asked for */
+  top: 50%;
+  transform: translateY(-50%); /* vertically center relative to the title */
+  height: 48px;             /* adjust to taste */
+  width: auto;
+}
+
+/* hamburger pinned to the far right */
+.hamburger {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #F15C22;
+  align-items: center;
+}
+
+.hamburger img{
+    display: block;
 }
 
 /* Navbar bar itself (always full width orange) */
@@ -119,7 +152,7 @@ header img {
     padding: 15px;
     display: block;
     text-align: center;
-    font-size: 20px;
+    font-size: 22px;
     transition: background-color 0.2s ease;
 }
 
@@ -130,13 +163,17 @@ header img {
 /* Hamburger button */
 .hamburger {
     display: none; /* hidden on desktop */
-    font-size: 32px;
     background: none; /* transparent so it blends into bar */
     border: none;
     color: #F15C22;
     cursor: pointer;
     position: absolute;
-    right: 10px;
+    right: 20px;
+    padding: 0px;
+}
+
+.hamburger img{
+    height: 2rem;
 }
 
 /* Close button inside sidebar */
@@ -162,7 +199,7 @@ main{
 }
 
 .page-content {
-    padding-top: clamp(20px, 4vw, 40px);
+    padding-top: clamp(20px, 2vw, 40px);
     padding-left: clamp(20px, 3vw, 70px);
     padding-right: clamp(20px, 3vw, 70px);
     padding-bottom: clamp(20px, 4vw, 70px);
@@ -358,5 +395,3 @@ hr {
     }
 }
     
-
-
