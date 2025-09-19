@@ -224,7 +224,7 @@ main h3{
 #home-page-greeting{
     text-align: center;
     align-items: center;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
 }
 
 #home-page-greeting p{
@@ -320,6 +320,19 @@ hr {
   height: auto;
 }
 
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 1rem; /* spacing between items */
+}
+
+.image-grid img {
+  width: 100%;         /* make image fill its grid cell */
+  height: 200px;       /* fixed height for uniformity */
+  object-fit: cover;   /* crop while preserving aspect ratio */
+  border-radius: 8px;  /* optional rounded corners */
+}
+
 /* --- apply this CSS only if the screen width is 768px or less (mobile devices) --- */
 @media (max-width: 768px) {
     .close-btn {
@@ -351,7 +364,7 @@ hr {
     .nav-links li a {
         width: 100%;
         padding: 15px 20px;
-        font-size: 20px;
+        font-size: 22px;
         text-align: left;
     }
 
