@@ -333,6 +333,16 @@ hr {
   border-radius: 8px;  /* optional rounded corners */
 }
 
+#see-more-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
 /* --- apply this CSS only if the screen width is 768px or less (mobile devices) --- */
 @media (max-width: 768px) {
     .close-btn {
