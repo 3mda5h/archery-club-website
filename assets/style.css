@@ -320,6 +320,22 @@ hr {
   height: auto;
 }
 
+#calendar-group {
+  display: flex;
+  width: 95%;
+  gap: 5%;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#calendar-group img {
+  flex: 1 1 auto;  
+  width: 47%;
+  flex: 0 0 47%;  
+  height: auto;
+}
+
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
@@ -415,6 +431,14 @@ hr {
     order: 2; /* always keep text above */
         width: 75%;
         height: auto;  /* keep correct aspect ratio */
+    }
+
+    #calendar-group {
+      flex-direction: column;
+    }
+    
+    #calendar-group img{
+       width: 95%;
     }
 }
     
