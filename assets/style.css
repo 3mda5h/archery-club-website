@@ -261,7 +261,7 @@ main h3{
 }
 
 #home-page-buttons a:hover{
-    background-color: #c2c0c0;
+    background-color: #d4d4d4;
 }
 
 #home-page-buttons img{
@@ -357,6 +357,23 @@ hr {
   background: #333;
   color: white;
   cursor: pointer;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-icons{
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* this controls the spacing */
+    margin-top: 20px;
+}
+
+footer a img{
+  width: auto;
+  height: 40px;
 }
 
 /* --- apply this CSS only if the screen width is 768px or less (mobile devices) --- */

@@ -38,8 +38,8 @@ func main() {
 	http.HandleFunc("/photo_gallery", func(w http.ResponseWriter, r *http.Request) {
 		renderTemplate(w, "photo_gallery.html")
 	})
-	http.HandleFunc("/contact", func(w http.ResponseWriter, r *http.Request) {
-		renderTemplate(w, "contact.html")
+	http.HandleFunc("/faq", func(w http.ResponseWriter, r *http.Request) {
+		renderTemplate(w, "faq.html")
 	})
 
 	log.Println("Server running at http://localhost:5000")
