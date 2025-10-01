@@ -304,13 +304,19 @@ hr {
   height: auto;
 }
 
+
+#SLI_screenshot {
+  width: 45%;
+  flex: 0 0 45%;
+  height: auto;
+}
+
 .image-group {
   display: flex;
   width: 45%;
   flex: 0 0 40%;  
   gap: 6%;
   align-items: center;
-
 }
 
 .image-group img {
@@ -450,7 +456,7 @@ footer a img{
 
     .image-text-block img {
         order: 2; /* always push image to the bottom */
-        width: 70%;
+        width: 80%;
         height: auto;  /* keep correct aspect ratio */
     }
 
@@ -470,6 +476,10 @@ footer a img{
     
     #calendar-group img{
        width: 95%;
+    }
+    
+    #SLI_screenshot{
+        width: 95%;
     }
 }
     
